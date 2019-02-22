@@ -142,7 +142,7 @@ abstract class ItemControllerAbstract extends Controller
         if (\Yii::$app->request->isAjax && $model->load(\Yii::$app->request->post())) {
             \Yii::$app->response->format = Response::FORMAT_JSON;
             \Yii::$app->response->data = json_encode(ActiveForm::validate($model));
-            \Yii::$app->end();
+            \Yii::$app->end(0, "");
         }
     }
 }
